@@ -1,0 +1,43 @@
+{
+	"modify": [
+		// Buff Predator HP (1st 50 -> 63 | rage 60 -> 75)
+		{
+			"match":
+			{
+				"classname": "trigger_hurt",
+				"targetname": "[PR#]fboss_start_trigger",
+				"io": [
+					{
+						"overrideparam": "50"
+					}
+				]
+			},
+			"replace":
+			{
+				"io":
+				{
+					"overrideparam": "63"
+				}
+			}
+		},
+		{
+			"match":
+			{
+				"classname": "trigger_hurt",
+				"targetname": "[PR#]fboss_start_trigger",
+				"io": [
+					{
+						"overrideparam": "60"
+					}
+				]
+			},
+			"replace":
+			{
+				"io":
+				{
+					"overrideparam": "75"
+				}
+			}
+		}
+	]
+}

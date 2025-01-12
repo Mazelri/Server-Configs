@@ -1,0 +1,43 @@
+{
+	"modify": [
+		// Buff alien hp (10 -> 25)
+		{
+			"match":
+			{
+				"targetname": "[PR#]fboss_end_brush_particle",
+				"classname": "trigger_multiple",
+				"io": [
+					{
+						"overrideparam": "10"
+					}
+				]
+			},
+			"replace":
+			{
+				"io":
+				{
+					"overrideparam": "25"
+				}
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]fboss_end_brush_particle",
+				"classname": "trigger_multiple",
+				"io": [
+					{
+						"overrideparam": "OnUser3>fboss_ee_math>Subtract>10>0>1"
+					}
+				]
+			},
+			"replace":
+			{
+				"io":
+				{
+					"overrideparam": "OnUser3>fboss_ee_math>Subtract>25>0>1"
+				}
+			}
+		}
+	]
+}

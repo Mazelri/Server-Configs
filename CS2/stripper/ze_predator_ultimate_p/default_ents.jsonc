@@ -1,0 +1,125 @@
+{
+	"modify": [
+		{
+			// Add modified massage
+			"match":
+			{
+				"classname": "logic_relay",
+				"targetname": "/_options/"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]server",
+						"inputname": "Command",
+						"overrideparam": "say *** Modified by Stripper ***",
+						"delay": 5.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]server",
+						"inputname": "Command",
+						"overrideparam": "say *** Version: 250112 ***",
+						"delay": 5.5
+					}
+				]
+			}
+		},
+		// HYPER
+		{
+			// fix boss hp overflow (base 420 + 165 * 40 ppl)
+			"match":
+			{
+				"targetname": "[PR#]cboss_predatorhealth_counter",
+				"classname": "math_counter"
+			},
+			"replace":
+			{
+				"max": "7020"
+			}
+		},
+		{
+			// fix boss interupt value overflow (35 * 40 ppl)
+			"match":
+			{
+				"targetname": "[PR#]cboss_predator_interuptcounter_setvalue",
+				"classname": "math_counter"
+			},
+			"replace":
+			{
+				"max": "1400"
+			}
+		},
+		// ULTIMATE
+		{
+			// first hp (base 420 + 63 * 40ppl)
+			"match":
+			{
+				"targetname": "[PR#]fboss_math_2",
+				"classname": "math_counter"
+			},
+			"replace":
+			{
+				"max": "2940"
+			}
+		},
+		{
+			// rage hp (base 512 + 75 * 40ppl)
+			"match":
+			{
+				"targetname": "[PR#]fboss_math_1",
+				"classname": "math_counter"
+			},
+			"replace":
+			{
+				"max": "3512"
+			}
+		},
+		{
+			// alien hp (base 150 + 25 * 30ppl)
+			"match":
+			{
+				"targetname": "[PR#]fboss_ee_math",
+				"classname": "math_counter"
+			},
+			"replace":
+			{
+				"max": "900",
+                "startvalue": "150"
+			}
+		},
+		{
+			// fix typo
+			"match":
+			{
+				"targetname": "[PR#]fboss_relay_start",
+				"classname": "logic_relay",
+				"io": [
+					{
+						"inputname": "enable"
+					}
+				]
+			},
+			"replace":
+			{
+				"io": {
+					"inputname": "Enable"
+				}
+			}
+		},
+		{
+			// fix overflow damage(no write, dont enabled stripper why?)
+			"match":
+			{
+				"targetname": "[PR#]escape_door",
+				"classname": "func_door"
+			},
+			"replace":
+			{
+				"dmg": "99999"
+			}
+		}
+	]
+}

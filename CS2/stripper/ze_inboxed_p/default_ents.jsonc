@@ -1,0 +1,107 @@
+{
+	"modify": [
+		{
+			"match":
+			{
+				"classname": "logic_auto"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnMapSpawn",
+						"targetname": "[PR#]server",
+						"inputname": "Command",
+						"overrideparam": "say *** Modified by Stripper ***",
+						"delay": 5.0
+					},
+					{
+						"outputname": "OnMapSpawn",
+						"targetname": "[PR#]server",
+						"inputname": "Command",
+						"overrideparam": "say *** Version: 250112 ***",
+						"delay": 5.1
+					}
+				]
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]ct_kill_1",
+				"classname": "trigger_hurt"
+			},
+			"insert":
+			{
+				"target": "[PR#]level_2_tel",
+				"targetname": "[PR#]1",
+				"classname": "trigger_teleport"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]ct_kill_2",
+				"classname": "trigger_hurt"
+			},
+			"insert":
+			{
+				"target": "[PR#]level_7_tel",
+				"targetname": "[PR#]2",
+				"classname": "trigger_teleport"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]ct_kill_3",
+				"classname": "trigger_hurt"
+			},
+			"insert":
+			{
+				"target": "[PR#]level_6_tel",
+				"targetname": "[PR#]6",
+				"classname": "trigger_teleport"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]ct_kill_4",
+				"classname": "trigger_hurt"
+			},
+			"insert":
+			{
+				"target": "[PR#]level_8_tel",
+				"targetname": "[PR#]3",
+				"classname": "trigger_teleport"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]ct_kill_5",
+				"classname": "trigger_hurt"
+			},
+			"insert":
+			{
+				"target": "[PR#]level_9_tel",
+				"targetname": "[PR#]4",
+				"classname": "trigger_teleport"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]ct_kill_6",
+				"classname": "trigger_hurt"
+			},
+			"insert":
+			{
+				"target": "[PR#]level_4_tel",
+				"targetname": "[PR#]5",
+				"classname": "trigger_teleport"
+			}
+		}
+	]
+}
