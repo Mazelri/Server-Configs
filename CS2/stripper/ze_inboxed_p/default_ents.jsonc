@@ -1,6 +1,7 @@
 {
 	"modify": [
 		{
+			// Add modified massage
 			"match":
 			{
 				"classname": "logic_auto"
@@ -25,6 +26,7 @@
 				]
 			}
 		},
+		// Rework map system
 		{
 			"match":
 			{
