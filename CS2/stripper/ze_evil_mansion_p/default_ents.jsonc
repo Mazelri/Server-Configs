@@ -1,0 +1,169 @@
+{
+	"filter": [
+		{
+			"targetname": "[PR#]Collum_room_relay",
+			"classname": "logic_relay"
+		},
+		{
+			"targetname": "[PR#]Advance_tele_trigger2_timer",
+			"classname": "logic_timer"
+		},
+		{
+			"targetname": "[PR#]Zombie_trapped_relay",
+			"classname": "logic_relay"
+		}
+	],
+	"modify": [
+		{
+			"match":
+			{
+				"targetname": "[PR#]Announcer_relay",
+				"classname": "logic_relay"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnSpawn",
+						"targetname": "[PR#]Command",
+						"inputname": "Command",
+						"overrideparam": "say *** Modified by Stripper ***",
+						"delay": 3.0
+					},
+					{
+						"outputname": "OnSpawn",
+						"targetname": "[PR#]Command",
+						"inputname": "Command",
+						"overrideparam": "say *** Version: 250114 ***",
+						"delay": 3.1
+					}
+				]
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]Trigger_multiple_collumroom",
+				"classname": "trigger_once"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Command",
+						"inputname": "Command",
+						"overrideparam": "say -=Door opens in 20 seconds.=-",
+						"onlyonce": 1
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Command",
+						"inputname": "Command",
+						"overrideparam": "-=Door opens in 5 seconds.=-",
+						"onlyonce": 1,
+						"delay": 15.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Collum_door",
+						"inputname": "Open",
+						"overrideparam": "[PR#]Collum_door",
+						"onlyonce": 1,
+						"delay": 19.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Command",
+						"inputname": "Command",
+						"overrideparam": "say  -=Zombies are trapped for 15 secs or til CTs find a solution.=-",
+						"onlyonce": 1,
+						"delay": 20.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Advance_tele_trigger2",
+						"inputname": "Enable",
+						"onlyonce": 1,
+						"delay": 20.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Advance_tele_trigger2",
+						"inputname": "Disable",
+						"onlyonce": 1,
+						"delay": 34.9
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Zombie_release",
+						"inputname": "Enable",
+						"onlyonce": 1,
+						"delay": 35.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Advance_tele1a_trigger",
+						"inputname": "Enable",
+						"onlyonce": 1,
+						"delay": 35.0
+					}
+				]
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]Advance_tele2",
+				"classname": "point_teleport"
+			},
+			"replace":
+			{
+				"classname": "info_teleport_destination"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]Zombie_release",
+				"classname": "trigger_teleport"
+			},
+			"replace":
+			{
+				"target": "[PR#]Advance_tele2"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]Dr_valencia_relay2",
+				"classname": "logic_relay"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Advance_tele_trigger2",
+						"inputname": "Disable",
+						"onlyonce": 1
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Zombie_release",
+						"inputname": "Enable",
+						"onlyonce": 1,
+						"delay": 0.1
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]Advance_tele1a_trigger",
+						"inputname": "Enable",
+						"onlyonce": 1,
+						"delay": 0.1
+					}
+				]
+			}
+		}
+	]
+}

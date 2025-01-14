@@ -21,7 +21,7 @@
 						"outputname": "OnTrigger",
 						"targetname": "[PR#]server",
 						"inputname": "Command",
-						"overrideparam": "say *** Version: 250112 ***",
+						"overrideparam": "say *** Version: 250114 ***",
 						"delay": 5.5
 					}
 				]
@@ -78,7 +78,7 @@
 			}
 		},
 		{
-			// alien hp (base 150 + 25 * 30ppl)
+			// alien hp (base 150 + 15 * 30ppl)
 			"match":
 			{
 				"targetname": "[PR#]fboss_ee_math",
@@ -86,7 +86,7 @@
 			},
 			"replace":
 			{
-				"max": "900",
+				"max": "600",
                 "startvalue": "150"
 			}
 		},

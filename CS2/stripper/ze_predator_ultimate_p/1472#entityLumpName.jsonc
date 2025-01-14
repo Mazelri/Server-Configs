@@ -1,6 +1,6 @@
 {
 	"modify": [
-		// Buff alien hp (10 -> 25)
+		// Buff alien hp (10 -> 15)
 		{
 			"match":
 			{
@@ -16,7 +16,7 @@
 			{
 				"io":
 				{
-					"overrideparam": "25"
+					"overrideparam": "15"
 				}
 			}
 		},
@@ -35,7 +35,7 @@
 			{
 				"io":
 				{
-					"overrideparam": "OnUser3>fboss_ee_math>Subtract>25>0>1"
+					"overrideparam": "OnUser3>fboss_ee_math>Subtract>15>0>1"
 				}
 			}
 		}
