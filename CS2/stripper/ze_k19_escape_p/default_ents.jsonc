@@ -1,0 +1,30 @@
+{
+	"modify": [
+		{
+			// Fix duplicate toggle_respawn issue
+			"match":
+			{
+				"classname": "trigger_once",
+				"io": [
+					{
+						"targetname": "[PR#]zr_toggle_respawn"
+					}
+				]
+			},
+			"replace":
+			{
+				"io": 
+				{
+					"inputname": "Disable"
+				}
+			},
+			"insert":
+			{
+				"io": 
+				{
+					"onlyonce": 1
+				}
+			}
+		}
+	]
+}

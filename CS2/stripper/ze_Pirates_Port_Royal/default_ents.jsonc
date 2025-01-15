@@ -1,0 +1,17 @@
+{
+	"modify": [
+		{
+			// Fix Stage 5 after kraken zombie tp stucked
+			// (reported this glich to mapper. if comming update, no need this stripper)
+			"match":
+			{
+				"classname": "info_teleport_distination",
+				"targetname": "[PR#]port_lvl5_6"
+			},
+			"replace":
+			{
+				"origin": "4711 9620 9070"
+			}
+		}
+	]
+}
