@@ -15,6 +15,7 @@
 	],
 	"modify": [
 		{
+			// Add modified massage
 			"match":
 			{
 				"targetname": "[PR#]Announcer_relay",
@@ -41,6 +42,7 @@
 			}
 		},
 		{
+			// Rework glitch occurs trigger
 			"match":
 			{
 				"targetname": "[PR#]Trigger_multiple_collumroom",
