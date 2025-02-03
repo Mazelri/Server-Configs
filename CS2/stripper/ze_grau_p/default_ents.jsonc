@@ -1,0 +1,45 @@
+{
+	"modify": [
+		{
+			"match":
+			{
+				"classname": "logic_relay",
+				"targetname": "/level/"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]sc",
+						"inputname": "Command",
+						"overrideparam": "say *** Modified by Stripper ***",
+						"onlyonce": 1,
+						"delay": 2.0
+					},
+					{
+						"outputname": "OnTrigger",
+						"targetname": "[PR#]sc",
+						"inputname": "Command",
+						"overrideparam": "say *** Version: 250202 ***",
+						"onlyonce": 1,
+						"delay": 2.5
+					}
+				]
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]l1_door_6",
+				"classname": "func_movelinear"
+			},
+			"replace":
+			{
+				"classname": "func_door",
+				"dmg": "99999",
+				"wait": "-1"
+			}
+		}
+	]
+}
