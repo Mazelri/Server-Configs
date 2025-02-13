@@ -28,6 +28,7 @@
 				]
 			}
 		},
+		// func_moveliner sometimes fails to kill
 		{
 			"match":
 			{
