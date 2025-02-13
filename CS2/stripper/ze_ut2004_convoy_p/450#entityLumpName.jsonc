@@ -1,0 +1,38 @@
+{
+	"modify": [
+		// buff boss damage(like css and csgo)
+		{
+			"match":
+			{
+				"targetname": "[PR#]boss_turrets_hurt",
+				"classname": "trigger_hurt"
+			},
+			"replace":
+			{
+				"damage": "10"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]boss_lower_laser_hurt",
+				"classname": "trigger_hurt"
+			},
+			"replace":
+			{
+				"damage": "75"
+			}
+		},
+		{
+			"match":
+			{
+				"targetname": "[PR#]boss_higher_laser_hurt",
+				"classname": "trigger_hurt"
+			},
+			"replace":
+			{
+				"damage": "75"
+			}
+		}
+	]
+}

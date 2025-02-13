@@ -1,0 +1,29 @@
+{
+	"modify": [
+		{
+			"match":
+			{
+				"classname": "logic_auto"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnMapSpawn",
+						"targetname": "[PR#]command",
+						"inputname": "Command",
+						"overrideparam": "say *** Modified by Stripper ***",
+						"delay": 3.0
+					},
+					{
+						"outputname": "OnMapSpawn",
+						"targetname": "[PR#]command",
+						"inputname": "Command",
+						"overrideparam": "say *** Version: 250214 ***",
+						"delay": 3.1
+					}
+				]
+			}
+		}
+	]
+}
