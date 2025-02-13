@@ -1,0 +1,53 @@
+{
+	"modify": [
+		{
+			"match":
+			{
+				"classname": "logic_auto"
+			},
+			"insert":
+			{
+				"io": [
+					{
+						"outputname": "OnMapSpawn",
+						"targetname": "[PR#]server",
+						"inputname": "Command",
+						"overrideparam": "say *** Modified by Stripper ***",
+						"delay": 3.0
+					},
+					{
+						"outputname": "OnMapSpawn",
+						"targetname": "[PR#]server",
+						"inputname": "Command",
+						"overrideparam": "say *** Version: 250213 ***",
+						"delay": 3.1
+					}
+				]
+			}
+		},
+		// delete equip awp and drop knife
+		{
+			"match":
+			{
+				"targetname": "[PR#]trigger_end",
+				"classname": "func_button"
+			},
+			"delete":
+			{
+				"io": [
+					{
+						"outputname": "OnPressed",
+						"targetname": "[PR#]weapon_drop",
+						"inputname": "use",
+						"delay": 0.01
+					},
+					{
+						"outputname": "OnPressed",
+						"targetname": "[PR#]nuke_awp_sp",
+						"inputname": "ForceSpawn"
+					}
+				]
+			}
+		}
+	]
+}
